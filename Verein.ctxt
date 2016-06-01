@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=pNeuerVerein
+comment0.target=Verein(java.lang.String)
+comment0.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Verein\r\n
+comment1.params=
+comment1.target=int\ getTorDifferenz()
+comment1.text=\r\n\ Ein\ Beispiel\ einer\ Methode\ -\ ersetzen\ Sie\ diesen\ Kommentar\ mit\ Ihrem\ eigenen\r\n\ \r\n\ @param\ \ y\ \ \ \ ein\ Beispielparameter\ f\u00FCr\ eine\ Methode\r\n\ @return\ \ \ \ \ \ \ \ die\ Summe\ aus\ x\ und\ y\r\n
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment3.params=
+comment3.target=int\ getPunkte()
+comment4.params=pNeuePunkte
+comment4.target=void\ setPunkte(int)
+comment5.params=
+comment5.target=int\ getGeschossen()
+comment6.params=
+comment6.target=int\ getKassiert()
+comment7.params=pNeueGeschossen
+comment7.target=void\ setGeschossen(int)
+comment8.params=pNeueKassiert
+comment8.target=void\ setKassiert(int)
+numComments=9
