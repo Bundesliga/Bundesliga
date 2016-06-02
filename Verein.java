@@ -53,6 +53,11 @@ public class Verein
     return name;
     }
     
+    public void setName( String pNeuerName)
+    {
+        name = pNeuerName;
+    }
+    
     public int getPunkte()
     {
     return punkte;    
