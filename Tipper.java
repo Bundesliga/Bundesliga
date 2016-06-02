@@ -65,8 +65,8 @@ public class Tipper
     
     public void tippAbgeben()
     {
-        verein[1].setGeschossenenTore();
-        verein[2].setGeschossenenTore();
+        verein[1].setGeschossen();
+        verein[2].setGeschossen();
     }
 }
 
