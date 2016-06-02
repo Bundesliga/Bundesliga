@@ -114,7 +114,7 @@ public class Tabelle
     }
 }
 
- public void schreibeDatei()
+ public void schreibeDatei extends Writer() 
     {
         FileWriter fw;
         try {
