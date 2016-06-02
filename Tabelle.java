@@ -135,7 +135,7 @@ public class Tabelle
     }
 
 
-public void leseDatei() {
+public void leseDatei extends Reader() {
         
         try {
             
