@@ -16,23 +16,24 @@ public class Verein
     private int gespielt;
     private int gewonnen;
     private int verloren;
-    private int unendschieden;
+    private int unentschieden;
 
     /**
      * Konstruktor für Objekte der Klasse Verein
      */
-    public Verein(String pNeuerVerein)
+    public Verein(String pNeuerName)
     {
         // Instanzvariable initialisieren
-        name = pNeuerVerein;
+        name = pNeuerName;
         geschossen = 0;
         kassiert = 0;
-        torDifferenz = 0;
+        torDifferenz = geschossen - kassiert;
         punkte = 0;
         gespielt = 0;
         gewonnen = 0;
         verloren = 0;
-        unendschieden = 0;
+        unentschieden = 0;
+        
         
         
     }
@@ -53,9 +54,9 @@ public class Verein
     return name;
     }
     
-    public void setName( String pNeuerName)
+    public void setName(String pNeuerName)
     {
-        name = pNeuerName;
+    name = pNeuerName;    
     }
     
     public int getPunkte()
@@ -86,6 +87,46 @@ public class Verein
     public void setKassiert (int pNeueKassiert)
     {
     kassiert = kassiert + pNeueKassiert;   
+    }
+    
+    public int getGewonnen()
+    {
+     return gewonnen;   
+    }
+
+     public int getVerloren()
+    {
+     return verloren;   
+    }   
+    
+    public int getUnentschieden()
+    {
+     return unentschieden;   
+    }
+    
+    public int getGespielt()
+    {
+     return gespielt;   
+    }
+    
+    public void setGespielt(int pNeueGespielt)
+    {
+        gespielt = gespielt + pNeueGespielt;
+    }
+    
+    public void setGewonnen(int pNeueGewonnen)
+    {
+        gewonnen = gewonnen + pNeueGewonnen;
+    }
+    
+    public void setVerloren(int pNeueVerloren)
+    {
+        verloren = verloren + pNeueVerloren;
+    }
+    
+    public void setUnentschieden(int pNeueUnentschieden)
+    {
+     unentschieden = unentschieden + pNeueUnentschieden;   
     }
     
     }
