@@ -1,8 +1,16 @@
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.OutputStreamWriter;
+import java.io.FileOutputStream;
+import java.io.Writer;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 /**
  * Beschreiben Sie hier die Klasse Tabelle.
@@ -10,7 +18,8 @@ import java.io.FileWriter;
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Tabelle
+public class Tabelle 
+
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private Verein[] tabelle;
@@ -35,7 +44,7 @@ public class Tabelle
      */
     public void starteNeueSaison()
     {
-     verein1 = new Verein("FC Bayern München");
+     verein1 = new Verein("FC Bayern München");     
      tabelle[0] = verein1;
      verein2 = new Verein ("SV Darmstadt 98");
      tabelle[1] = verein2;
@@ -114,7 +123,6 @@ public class Tabelle
     }
 }
 
- 
  public void schreibeDatei() 
     {
        
@@ -125,7 +133,7 @@ public class Tabelle
             
             //die Werte aus dem Array tabelle in eine neue Tabelle schreiben (�berschreiben der Datei "tabelle.csv")
             for (int i=0; i < 18; i++) {
-                                                   fw.write(tabelle[i].getName() + ";" + tabelle[i].getPunkte() + ";" + tabelle[i].getGeschossen() + ";" + tabelle[i].getKassiert()  + ";"+ tabelle[i].getTorDifferenz() + ";" + tabelle[i].getGespielt() + ";" + tabelle[i].getGewonnen()  + ";" + tabelle[i].getVerloren() + ";" + tabelle[i].getUnentschieden() + ";\n");
+                                                   fw.write(tabelle[i].getName() + ";" + tabelle[i].getPunkte() + ";" + tabelle[i].getGeschossen() + ";" + tabelle[i].getKassiert()  + ";" + tabelle[i].getGespielt() + ";" + tabelle[i].getGewonnen()  + ";" + tabelle[i].getVerloren() + ";" + tabelle[i].getUnentschieden() + ";\n");
                                                   }
             
             fw.close();
@@ -135,6 +143,7 @@ public class Tabelle
             System.out.println(e.toString());
         }
     }
+
 
 public void leseDatei() {
         
@@ -147,16 +156,16 @@ public void leseDatei() {
                 // Ganze Zeile:
                 // System.out.println(line);               
                 String[] parts = line.split(";");
-                tabelle[i] = new Verein();
+                tabelle[i] = new Verein("");   
                 tabelle[i].setName(parts[0]);
+                tabelle[1].setName(parts[0]);
                 tabelle[i].setPunkte(Integer.parseInt(parts[1]));
-                tabelle[1].setGeschossen(Integer.parseInt(parts[2]));
-                tabelle[i].setKassiert(Integer.parseInt(parts[3]));
-                tabelle[i].setTorDifferenz(Integer.parseInt(parts[4]));
-                tabelle[i].setGespielt(Integer.parseInt(parts[5]));
-                tabelle[i].setGewonnen(Integer.parseInt(parts[6]));
-                tabelle[i].setVerloren(Integer.parseInt(parts[7]));
-                tabelle[i].setUnentschieden(Integer.parseInt(parts[8]));
+                tabelle[i].setGeschossen(Integer.parseInt(parts[2]));
+                tabelle[i].setKassiert(Integer.parseInt(parts[3]));               
+                tabelle[i].setGespielt(Integer.parseInt(parts[4]));
+                tabelle[i].setGewonnen(Integer.parseInt(parts[5]));
+                tabelle[i].setVerloren(Integer.parseInt(parts[6]));
+                tabelle[i].setUnentschieden(Integer.parseInt(parts[7]));
                 
                 i++;
                 }
@@ -166,19 +175,16 @@ public void leseDatei() {
         } catch(IOException e) {
             e.printStackTrace();
         } finally {
-            if(br != null) {
+          /*  if( br != null) {
                 try {
                     br.close();
                 } catch(IOException e) {
                     e.printStackTrace();
                 }
-            }
+            }*/
         }
     }
 
-
-    }
-    
-   
-   
 }
+   
+   
