@@ -114,32 +114,33 @@ public class Tabelle
     }
 }
 
- public void schreibeDatei extends Writer() 
+ 
+ public void schreibeDatei() 
     {
-        FileWriter fw;
+       
         try {
             //auch hier muss nun f�r die Umlaute ein "Umweg" gegangen werden, da �ber den FileWriter nicht mit UTF-8 kodiert wird
-            fw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(tabelle), "UTF8"));
+            File tabellenSpeicher = new File("E:/zeug/Schule/EF/Halbjahr_2/tabellenSpeicher.csv");
+            Writer fw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(tabellenSpeicher), "UTF8"));
             
             //die Werte aus dem Array tabelle in eine neue Tabelle schreiben (�berschreiben der Datei "tabelle.csv")
-            for (int i=0; i < anzahlVereine; i++) {
-                                                   fw.write(tabelle[i].getName() + ";" + tabelle[i].getPunkte() + ";\n");
+            for (int i=0; i < 18; i++) {
+                                                   fw.write(tabelle[i].getName() + ";" + tabelle[i].getPunkte() + ";" + tabelle[i].getGeschossen() + ";" + tabelle[i].getKassiert()  + ";"+ tabelle[i].getTorDifferenz() + ";" + tabelle[i].getGespielt() + ";" + tabelle[i].getGewonnen()  + ";" + tabelle[i].getVerloren() + ";" + tabelle[i].getUnentschieden() + ";\n");
                                                   }
             
             fw.close();
         }
         catch (IOException e){
-            System.out.println("Fehler beim Schreiben der Datei " + dateiName);
+            System.out.println("Fehler beim Schreiben der Datei tabellenSpeicher");
             System.out.println(e.toString());
         }
     }
 
-
-public void leseDatei extends Reader() {
+public void leseDatei() {
         
         try {
             
-            BufferedReader  br = new BufferedReader(new InputStreamReader(new FileInputStream(dateiName),"UTF8"));
+            BufferedReader  br = new BufferedReader(new InputStreamReader(new FileInputStream("tabellenSpeicher.csv"),"UTF8"));
             String line = null;
             int i = 0;
             while((line = br.readLine()) != null) {
@@ -149,6 +150,14 @@ public void leseDatei extends Reader() {
                 tabelle[i] = new Verein();
                 tabelle[i].setName(parts[0]);
                 tabelle[i].setPunkte(Integer.parseInt(parts[1]));
+                tabelle[1].setGeschossen(Integer.parseInt(parts[2]));
+                tabelle[i].setKassiert(Integer.parseInt(parts[3]));
+                tabelle[i].setTorDifferenz(Integer.parseInt(parts[4]));
+                tabelle[i].setGespielt(Integer.parseInt(parts[5]));
+                tabelle[i].setGewonnen(Integer.parseInt(parts[6]));
+                tabelle[i].setVerloren(Integer.parseInt(parts[7]));
+                tabelle[i].setUnentschieden(Integer.parseInt(parts[8]));
+                
                 i++;
                 }
         
@@ -165,6 +174,9 @@ public void leseDatei extends Reader() {
                 }
             }
         }
+    }
+
+
     }
     
    
