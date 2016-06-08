@@ -120,7 +120,7 @@ public class Tabelle
        
         try {
             //auch hier muss nun f�r die Umlaute ein "Umweg" gegangen werden, da �ber den FileWriter nicht mit UTF-8 kodiert wird
-            File tabellenSpeicher = new File("E:/zeug/Schule/EF/Halbjahr_2/tabellenSpeicher.csv");
+            File tabellenSpeicher = new File("tabellenSpeicher.csv");
             Writer fw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(tabellenSpeicher), "UTF8"));
             
             //die Werte aus dem Array tabelle in eine neue Tabelle schreiben (�berschreiben der Datei "tabelle.csv")
