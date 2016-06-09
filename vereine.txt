@@ -1,0 +1,18 @@
+        vereinsListe[0].setName("FC Bayern München");
+        vereinsListe[1].setName("Borussia Dortmund");
+        vereinsListe[2].setName("Bayer 04 Leverkusen");
+        vereinsListe[3].setName("Borussia Mönchengladbach");
+        vereinsListe[4].setName("FC Schalke 04");
+        vereinsListe[5].setName("1.FSV Mainz 05");
+        vereinsListe[6].setName("Hertha BSC");
+        vereinsListe[7].setName("Vfl Wolfsburg");  
+        vereinsListe[8].setName("1. FC Köln");
+        vereinsListe[9].setName("Hamburger SV");
+        vereinsListe[10].setName("FC Ingolstadt");
+        vereinsListe[11].setName("FC Augsburg");  
+        vereinsListe[12].setName("Werder Bremen");
+        vereinsListe[13].setName("SV Darmstadt 98");
+        vereinsListe[14].setName("TSG Hoffenheim");
+        vereinsListe[15].setName("Eintracht Frankfurt");
+        vereinsListe[16].setName("VfB Stuttgart");
+        vereinsListe[17].setName("Hannover 96");
