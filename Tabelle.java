@@ -32,8 +32,10 @@ public class Tabelle
     public Tabelle()
     {
         // Instanzvariable initialisieren
+        
         tabelle = new Verein[18];
         starteNeueSaison();
+
     }
 
     /**
@@ -88,6 +90,7 @@ public class Tabelle
     
     public void sortiereTabelle()
     {
+    leseDatei();
     int z = tabelle.length;
     
     while (z>1)
@@ -174,17 +177,17 @@ public void leseDatei() {
             e.printStackTrace();
         } catch(IOException e) {
             e.printStackTrace();
-        } finally {
-          /*  if( br != null) {
+        }/* finally {
+           if( br != null) {
                 try {
                     br.close();
                 } catch(IOException e) {
                     e.printStackTrace();
                 }
-            }*/
+            } */
         }
     }
 
-}
+
    
    
