@@ -1,0 +1,98 @@
+
+/**
+ * Beschreiben Sie hier die Klasse Spieltag.
+ * 
+ * @author (Ihr Name) 
+ * @version (eine Versionsnummer oder ein Datum)
+ */
+public class Spieltag
+{
+    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+    private int spielTagNummer;
+    private int heimVNr;
+    private int auswaertsVNr;
+    private int toreHeimTeam;
+    private int toreAuswaertsTeam;
+    private Verein heimTeam;
+    private Verein auswaertsTeam;
+    /**
+     * Konstruktor für Objekte der Klasse Spieltag
+     */
+    public Spieltag()
+    {
+        // Instanzvariable initialisieren
+       
+    }
+
+    /**
+     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * 
+     * @param  y    ein Beispielparameter für eine Methode
+     * @return        die Summe aus x und y
+     */
+    public int getSpielTagNummer()
+    {
+        // tragen Sie hier den Code ein
+        return spielTagNummer;
+    }
+    
+    public Verein getHeimTeam()
+    {
+    return heimTeam;
+    }
+    
+    public Verein getAuswaertsTeam()
+    {
+    return auswaertsTeam;
+    }
+    
+    public void setHeimTeam(Verein pHeimTeam)
+    {
+     heimTeam = pHeimTeam;    
+    }
+    
+    public void setAuswaertsTeam(Verein pAuswaertsTeam)
+    {
+    auswaertsTeam = pAuswaertsTeam;    
+    }
+    
+    public int getHeimVNr()
+    {
+     return heimVNr;   
+    }
+    
+    public int getAuswaertsVNr()
+    {
+    return auswaertsVNr;   
+    }
+    
+    public int toreHeimTeam()
+    {
+    return toreHeimTeam;
+    }       
+    
+    public void setSpielTagNummer(int pSpielTagNummer)
+    {
+     spielTagNummer = pSpielTagNummer;
+    }
+    
+    public void setHeimVNr(int pHeimVNr)
+    {
+     heimVNr = pHeimVNr;
+    }
+    
+    public void setAuswaertsVNr(int pAuswaertsVNr)
+    {
+    auswaertsVNr = pAuswaertsVNr;   
+    }
+    
+    public void setToreHeimTeam(int pToreHeimTeam)
+    {
+    toreHeimTeam = pToreHeimTeam;    
+    }
+    
+    public void setToreAuswaertsTeam(int pToreAuswaertsTeam)
+    {
+     toreAuswaertsTeam = pToreAuswaertsTeam;   
+    }
+}
