@@ -17,6 +17,7 @@ public class Verein
     private int gewonnen;
     private int verloren;
     private int unentschieden;
+    private int vNr;
 
     /**
      * Konstruktor für Objekte der Klasse Verein
@@ -33,6 +34,7 @@ public class Verein
         gewonnen = 0;
         verloren = 0;
         unentschieden = 0;
+        vNr = 0;
         
         
         
@@ -129,4 +131,13 @@ public class Verein
      unentschieden = unentschieden + pNeueUnentschieden;   
     }
     
+    public int getVNr()
+    {
+     return vNr;   
+    }
+    
+    public void setVNr(int pNeueVNr)
+    {
+    vNr = pNeueVNr;
+    } 
     }
